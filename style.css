@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* общие блоки */
+
+html,
+body,
+ul {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+body {
+    font-size: clamp(0.8rem, 0.743rem + 0.29vw, 1.2rem);
+    margin: 0 1%;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+main {
+    margin: 1rem 0;
+}
+
+.btn-link {
+    display: grid;
+    text-decoration: none;
+    background-color: #D57C39;
+    color: inherit;
+    width: 200px;
+    height: 60px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0s;
+    transition: background-color 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0s;
+}
+
+.btn-link:hover {
+    color: rgb(107, 107, 107);
+    background-color: rgb(214, 214, 214);
+}
+
+.btn-link>span {
+    margin: auto;
+}
+
+/* БЛОК header */
+
+.header {
+    display: flex;
+    border-bottom: 1px solid rgb(202, 202, 202);
+    justify-content: space-between;
+}
+
+.header__brand {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: center;
+    flex: 2;
+    min-width: 0;
+}
+
+.contact-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.header__logo {
+    max-width: 80px;
+    flex-shrink: 0;
+}
+
+.name-company {
+    max-width: 100%;
+    height: 100%;
+}
+
+.name-company>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    padding: 0 5%;
+    white-space: nowrap;
+}
+
+.header__navbar>ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    width: 100%;
+    gap: 3%;
+}
+
+.header__navbar>ul>li>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0s;
+}
+
+.header__navbar>ul>li>a:hover {
+    color: #D57C39;
+}
+
+/* КОНЕЦ БЛОКА header */
+
+/* БЛОК welcome-page */
+
+.welcome-page {
+    display: flex;
+    color: rgb(255, 255, 255);
+    background-image: url(images/bucket-with-hot-molt.jpg);
+    min-height: calc(100vh - 117px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+}
+
+.opacity-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.460);
+    flex: 1;
+    border-radius: 20px;
+    gap: 70px;
+}
+
+.slogan-company-first {
+    font-size: clamp(1.35rem, 1.043rem + 1.54vw, 3.5rem);
+    font-weight: 600;
+    text-align: center;
+}
+
+.slogan-company-second {
+    font-weight: 300;
+    word-break: break-word;
+    hyphens: auto;
+    text-align: center;
+    padding: 2%;
+}
+
+/* КОНЕЦ БЛОКА welcome-page */
+
+/* БЛОК about-us-block */
+
+.about-us-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 15vh 0 15vh 0;
+    max-width: 900px;
+    gap: 10%;
+}
+
+.text-about-us {
+    flex: 1;
+}
+
+.title-text-about-us {
+    font-size: clamp(1rem, 0.929rem + 0.36vw, 1.5rem);
+}
+
+.main-text-about-us {
+    word-break: break-word;
+    hyphens: auto;
+    line-height: 2;
+}
+
+.image-about-us {
+    flex: 1;
+    min-width: 390px;
+    max-width: 400px;
+    height: auto;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+}
+
+.image-about-us>img {
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: left;
+}
+
+/* КОНЕЦ БЛОКА about-us-block */
+
+/* БЛОК services */
+
+.services {
+    padding: 15vh 0 15vh 0;
+    margin: auto;
+    display: flex;
+    max-width: 950px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+}
+
+.services__title {
+    font-size: clamp(1.5rem, 1.314rem + 0.93vw, 2.8rem);
+    word-break: break-word;
+    hyphens: auto;
+    text-align: center;
+}
+
+.services__description {
+    font-size: clamp(1rem, 0.929rem + 0.36vw, 1.5rem);
+    word-break: break-word;
+    hyphens: auto;
+    text-align: center;
+}
+
+.services__list {
+    padding: 0 1rem 0 1rem;
+}
+
+.services__list>ul {
+    list-style-type: none;
+}
+
+.services__list>ul>li {
+    font-size: clamp(0.8rem, 0.771rem + 0.14vw, 1rem);
+    word-break: break-word;
+    hyphens: auto;
+    line-height: 2;
+}
+
+.services__list>ul b {
+    font-size: clamp(1rem, 0.936rem + 0.32vw, 1.45rem);
+    word-break: break-word;
+    hyphens: auto;
+    line-height: 1;
+}
+
+/* КОНЕЦ БЛОКА services */
+
+@media (max-width: 950px) {
+    .header__navbar {
+        display: none;
+    }
+
+    .contact-us {
+        display: none;
+    }
+}
+
+@media (max-width: 770px) {
+    .about-us-block {
+        flex-direction: column;
+        gap: clamp(1rem, 0.929rem + 0.36vw, 1.5rem);
+        padding: 15vh 6vw 15vh 6vw;
+    }
+
+    .image-about-us {
+        min-width: 0;
+        max-width: none;
+        width: 100%;
+    }
+
+    .title-text-about-us {
+        text-align: center;
+    }
+}
+
+/* @media (max-width: 1000px) {
+    body {
+        font-size: calc((1000px / 1920) * 24);
+    }
+
+} */
+
+/* .header__logo {
+    display: block;
+    flex-basis: 8%;
+    min-width: 80px;
+}
+
+.name-company {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: auto;
+    height: 100%;
+    white-space: nowrap;
+}
+
+.index__link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.index__link>div {
+    display: block;
+}
+
+.name-company>a {
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    padding-left: 2%;
+}
+
+.header__navbar>ul {
+    list-style-type: none;
+    display: flex;
+    white-space: nowrap;
+} */
+
+/* .btn-animation {
+  width: 100%;
+  height: 100%;
+  position:relative;
+  overflow:hidden;
+  
+  border-radius: 30px;
+} */
